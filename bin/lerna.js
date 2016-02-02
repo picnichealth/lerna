@@ -13,8 +13,14 @@ var cli = meow([
   "  bootstrap  Link together local packages and npm install remaining package dependencies",
   "  publish    Publish updated packages to npm",
   "  updated    Check which packages have changed since the last release",
-  ""
-]);
+  "",
+  "Options:",
+  "  --independent, -i  Version packages independently"
+], {
+  alias: {
+    independent: "i"
+  }
+});
 
 require("signal-exit").unload();
 
@@ -27,6 +33,6 @@ if (!command) {
   cli.showHelp();
 }
 
-var config = init(commandName, process.cwd());
+var config = init(commandName, process.cwd(), cli.flags.independent);
 
 command(config);
