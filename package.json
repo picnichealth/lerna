@@ -1,38 +1,26 @@
 {
-  "name": "lerna",
-  "version": "1.1.0",
-  "description": "Tool for managing JavaScript projects with multiple packages",
+  "name": "basket",
+  "version": "0.5.28",
+  "description": "Tool for managing Picnic packages",
   "main": "index.js",
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint lib",
-    "ci": "npm run lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sebmck/lerna.git"
-  },
-  "author": "Sebastian McKenzie <sebmck@gmail.com>",
-  "license": "MIT",
+  "repository": "https://github.com/picnichealth/picnic/tree/master/packages/basket",
+  "author": "Troy Astorino <troyastorino@gmail.com>",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/sebmck/lerna/issues"
+    "url": "https://github.com/picnichealth/picnic/issues"
   },
-  "homepage": "https://github.com/sebmck/lerna#readme",
   "dependencies": {
-    "async": "^1.5.0",
+    "bluebird": "^2.10.2",
     "chalk": "^1.1.1",
+    "dependency-graph": "^0.4.1",
+    "lodash": "^3.10.1",
     "meow": "^3.7.0",
-    "mkdirp": "^0.5.1",
     "pad": "^1.0.0",
     "progress": "^1.1.8",
     "readline-sync": "^1.2.21",
-    "rimraf": "^2.4.4",
-    "semver": "^5.1.0",
-    "signal-exit": "^2.1.2"
+    "semver": "^5.1.0"
   },
   "bin": {
-    "lerna": "./bin/lerna.js"
-  },
-  "devDependencies": {
-    "eslint": "^1.10.3"
+    "basket": "./bin/basket.js"
   }
 }
